@@ -24,9 +24,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID          0xEED3
 #define DEVICE_VER          0x0101
 
+/* raw hid */
+#define RAW_USAGE_PAGE 0xFF60
+#define RAW_USAGE_ID 0x61
+
 #define MANUFACTURER        "Massdrop Inc."
 #define PRODUCT             "ALT Keyboard"
-#define SERIAL_NUM          "Unavailable"
+#define SERIAL_NUM          "05HMMKAG070191"
 
 /* key matrix size */
 #define MATRIX_ROWS 5
@@ -182,5 +186,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
+
+
+/* added by me brandon */
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_SOLID_REACTIVE_SIMPLE // Sets the default mode, if none has been set
+
+// use this to change the color
+#define RGB_MATRIX_STARTUP_HUE 0 // Sets the default hue value, if none has been set
+#define RGB_MATRIX_STARTUP_SAT 255 // Sets the default saturation value, if none has been set
+#define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS // Sets the default brightness value, if none has been set
 
 #include "config_led.h"
